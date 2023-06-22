@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeStoryCollectionViewCell" id="gTV-IL-0wX" customClass="HomeStoryCollectionViewCell" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJj-s3-QLu">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="6ER-7v-KHN">
+                                <rect key="frame" x="4" y="4" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6ER-7v-KHN" secondAttribute="height" multiplier="1:1" id="UXN-xb-sao"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6ER-7v-KHN" secondAttribute="trailing" constant="4" id="Lxo-vF-mLm"/>
+                            <constraint firstItem="6ER-7v-KHN" firstAttribute="leading" secondItem="SJj-s3-QLu" secondAttribute="leading" constant="4" id="PYV-HM-CXp"/>
+                            <constraint firstItem="6ER-7v-KHN" firstAttribute="top" secondItem="SJj-s3-QLu" secondAttribute="top" constant="4" id="tdo-OF-rwW"/>
+                            <constraint firstAttribute="width" secondItem="SJj-s3-QLu" secondAttribute="height" multiplier="1:1" id="tsl-55-Rbg"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AU9-0K-YEb">
+                        <rect key="frame" x="24.666666666666671" y="80.666666666666671" width="31" height="14.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryPlus" translatesAutoresizingMaskIntoConstraints="NO" id="ct3-18-9UH">
+                        <rect key="frame" x="52" y="53" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ct3-18-9UH" secondAttribute="height" multiplier="1:1" id="0wu-SI-NK9"/>
+                            <constraint firstAttribute="width" constant="25" id="82Q-6s-1a4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="SJj-s3-QLu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9gT-qI-aPc"/>
+                <constraint firstItem="SJj-s3-QLu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ChI-Ld-qZM"/>
+                <constraint firstItem="ct3-18-9UH" firstAttribute="bottom" secondItem="6ER-7v-KHN" secondAttribute="bottom" constant="2" id="Fa6-zo-Gtv"/>
+                <constraint firstAttribute="trailing" secondItem="ct3-18-9UH" secondAttribute="trailing" constant="3" id="GjW-XL-oAY"/>
+                <constraint firstAttribute="bottom" secondItem="AU9-0K-YEb" secondAttribute="bottom" constant="5" id="dBs-7D-RdM"/>
+                <constraint firstAttribute="bottom" secondItem="AU9-0K-YEb" secondAttribute="bottom" constant="5" id="eE1-9M-WQi"/>
+                <constraint firstAttribute="trailing" secondItem="SJj-s3-QLu" secondAttribute="trailing" id="gEJ-dc-rXU"/>
+                <constraint firstItem="AU9-0K-YEb" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="o0q-eF-ggj"/>
+            </constraints>
+            <connections>
+                <outlet property="storyPlusImageView" destination="ct3-18-9UH" id="i8S-nS-T89"/>
+                <outlet property="storyProfileBackgroundView" destination="SJj-s3-QLu" id="gI5-5O-d7e"/>
+                <outlet property="storyProfileImageView" destination="6ER-7v-KHN" id="d8N-If-2SG"/>
+                <outlet property="storyProfileNameLabel" destination="AU9-0K-YEb" id="7Fe-q2-vby"/>
+            </connections>
+            <point key="canvasLocation" x="56.92307692307692" y="-4.2654028436018958"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="StoryPlus" width="22" height="23"/>
+        <image name="profile" width="100" height="102.66666412353516"/>
+    </resources>
+</document>

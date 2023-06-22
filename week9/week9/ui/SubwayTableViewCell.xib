@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SubwayTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubwayTableViewCell" id="KGk-i7-Jjw" customClass="SubwayTableViewCell" customModule="week9" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지하철역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kde-e0-jhN">
+                        <rect key="frame" x="10" y="15" width="52" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="nLS-lv-8AA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StationID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1M-oL-Re0">
+                        <rect key="frame" x="40" y="41.666666666666664" width="59.333333333333343" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPM-GM-VOL">
+                        <rect key="frame" x="10" y="40" width="20" height="20"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mPM-GM-VOL" secondAttribute="height" multiplier="1:1" id="4OB-CM-fg9"/>
+                            <constraint firstAttribute="width" constant="20" id="A6f-rt-aab"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="j1M-oL-Re0" firstAttribute="leading" secondItem="mPM-GM-VOL" secondAttribute="trailing" constant="10" id="7DK-Og-HpM"/>
+                    <constraint firstItem="j1M-oL-Re0" firstAttribute="centerY" secondItem="mPM-GM-VOL" secondAttribute="centerY" id="MV7-3f-cwx"/>
+                    <constraint firstItem="mPM-GM-VOL" firstAttribute="top" secondItem="kde-e0-jhN" secondAttribute="bottom" constant="10" id="Skc-P4-H69"/>
+                    <constraint firstItem="kde-e0-jhN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Ubp-tT-FKb"/>
+                    <constraint firstItem="mPM-GM-VOL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lAs-FA-dPX"/>
+                    <constraint firstItem="kde-e0-jhN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="oF7-vZ-5OT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="colorView" destination="mPM-GM-VOL" id="l5u-ef-hRQ"/>
+            </connections>
+            <point key="canvasLocation" x="145" y="-9"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
